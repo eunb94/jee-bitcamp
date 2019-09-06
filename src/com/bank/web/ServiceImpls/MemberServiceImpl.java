@@ -2,6 +2,8 @@ package com.bank.web.ServiceImpls;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bank.web.daoImpls.MemberDAOImpl;
+import com.bank.web.daos.MemberDAO;
 import com.bank.web.domains.CustomerBean;
 import com.bank.web.domains.EmployeeBean;
 import com.bank.web.domains.MemberBean;
@@ -13,15 +15,16 @@ public class MemberServiceImpl implements MemberService{
 	
 	private List <CustomerBean> customers;
 	private List<EmployeeBean> employees;
-	
+	private MemberDAO dao;
 	
 	public MemberServiceImpl() {
 		customers  = new ArrayList <>();
 		employees = new ArrayList<>();
+		dao = new MemberDAOImpl();
 	}
 	@Override
 	public void join(CustomerBean param) {
-		customers.add(param);
+		dao.insertCustomer(param);
 		
 		
 	}
@@ -45,6 +48,7 @@ public class MemberServiceImpl implements MemberService{
 			}
 		}
 		for(EmployeeBean e : employees) {
+			 
 			if(id.equals(e.getId())) {
 				m = e;
 				break;
@@ -52,28 +56,6 @@ public class MemberServiceImpl implements MemberService{
 		}
 		return m;
 	}
-
-	@Override
-	public boolean login(MemberBean param) {
-		MemberBean m = new MemberBean();
-		boolean flag = false;
-		for(CustomerBean c : customers) {
-			if(param.equals(c.getId())) {
-				flag = true;
-			break;
-			}
-		}
-		for(EmployeeBean e : employees) {
-			if(param.equals(e.getId())) {
-				flag = true;
-			break;	
-			}
-		}
-			
-		
-		return flag;
-	}
-
 	@Override
 	public int countCustomers() {
 		return customers.size();
@@ -117,6 +99,12 @@ public class MemberServiceImpl implements MemberService{
 		List<MemberBean> members = new ArrayList<>();
 		int count = 0;
 		return members;
+	}
+	@Override
+		public CustomerBean login(CustomerBean param) {
+			System.out.println("서비스 login 도착함");
+	    	CustomerBean cust = dao.login(param);
+	        return cust;
 	}
 
 		}

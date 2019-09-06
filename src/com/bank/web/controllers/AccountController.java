@@ -1,6 +1,8 @@
 package com.bank.web.controllers;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,9 +21,10 @@ public class AccountController extends HttpServlet {
 		System.out.println("===진입함===");
 		String money = request.getParameter("money");
 		AccountService service = new AccountServiceImpl();
-		service.createAccount(Integer.parseInt(money));
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		// service.createAccount(Integer.parseInt(money));
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/account/account.jsp");
+		rd.forward(request, response);
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 
