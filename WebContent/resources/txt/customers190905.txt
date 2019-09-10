@@ -1,34 +1,4 @@
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= sdfpw= sdfname= sdfssn= sdfcredit= sdf]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= sdfpw= sdfname= sdfssn= sdfcredit= sdf]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= sdfpw= sdfname= sdfssn= sdfcredit= sdf]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= sdfpw= sdfname= sdfssn= sdfcredit= sdf]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= sdfpw= sdfname= sdfssn= sdfcredit= sdf]
-고객정보
-[id= nullpw= nullname= nullssn= nullcredit= null]
-고객정보
-[id= dpw= dname= dssn= dcredit= d]
-null,null,null,null,null
 sdf,sdf,sdf,sdf,sdf
-d,d,d,d,d
-d,d,d,d,d
+sdf,sdf,sdf,sdf,sdf
+dd,dd,dd,dd,dd
+dd,dd,dd,dd,dd

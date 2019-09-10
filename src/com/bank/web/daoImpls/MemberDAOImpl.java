@@ -58,13 +58,17 @@ public class MemberDAOImpl implements MemberDAO{
 				param.setSsn(arr[3]);
 				param.setCredit(arr[4]);
 				
+				System.out.println("DAO 아웃함" +  param.toString());
+				
+				
 			}catch(Exception e) {
 				e.getStackTrace();
 			}
-			System.out.println("DAO 아웃함");
-				return param;
+			
+			 return param;	
 	}
-				
+
+	
 
 
 

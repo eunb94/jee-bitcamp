@@ -10,7 +10,7 @@
 <body>
 >
 마이페이지
-<h2>환영합니다 ${customer.name}</h2>
+<h2>환영합니다 ${customer.name}</h2><br/>
 		<h3> 아이디${customer.id}</h3><br/>
 		<h3> 비밀번호${customer.pw}</h3><br/>
 		<h3> 주민번호${customer.ssn}</h3><br/>

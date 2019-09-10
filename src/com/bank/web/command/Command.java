@@ -24,6 +24,7 @@ public class Command implements Order{
 	public void setPage() {
 		page = request.getParameter("page");
 	}
+
 }
 	
 
